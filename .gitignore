@@ -1,0 +1,6 @@
+// ignored files 
+
+.DS_Store
+node_modules
+.env
+.log

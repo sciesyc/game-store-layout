@@ -7,6 +7,16 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 1250px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -20,6 +30,17 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 1250px) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 870px) {
+  .container {
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content 50vwrepeat 3, min-content;
+  }
 }
 
 .title-1 {
@@ -60,6 +81,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 4rem 6rem;
   padding: 15rem 0;
+}
+@media only screen and (max-width: 600px) {
+  .cards {
+    padding: 5rem 0;
+  }
 }
 
 .card {
@@ -114,6 +140,11 @@ body {
   padding: 5rem 0 5rem 6rem;
   background: url(../img/header-bg.png) center/cover no-repeat;
 }
+@media only screen and (max-width: 870px) {
+  .header {
+    grid-column: full-start/full-end;
+  }
+}
 .header__btn {
   align-self: center;
   justify-self: center;
@@ -162,6 +193,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   grid-gap: 3rem 4rem;
 }
+@media only screen and (max-width: 600px) {
+  .features {
+    padding: 5rem 0;
+  }
+}
 
 .feature {
   display: grid;
@@ -186,8 +222,29 @@ body {
   background: #101D2C;
   grid-column: col-start 7/full-end;
   display: grid;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: max-content;
   grid-gap: 4rem 2rem;
+  justify-content: center;
+  align-content: center;
+}
+@media only screen and (max-width: 870px) {
+  .gamers {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .gamers {
+    grid-template-columns: min-content;
+    justify-items: start;
+  }
+}
+.gamers__box {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 2rem;
 }
 .gamers__title {
   grid-column: 1/-1;
@@ -214,10 +271,20 @@ body {
   grid-template-rows: repeat(24, 1fr);
   background: url(../img/background.png) center/cover no-repeat;
 }
+@media only screen and (max-width: 870px) {
+  .banner-img {
+    grid-column: 1/-1;
+  }
+}
 .banner-img__img-1 {
   width: 100%;
   grid-column: 3/15;
   grid-row: 3/12;
+}
+@media only screen and (max-width: 870px) {
+  .banner-img__img-1 {
+    grid-column: 2/10;
+  }
 }
 .banner-img__img-2 {
   width: 100%;
@@ -225,13 +292,24 @@ body {
   grid-row: 9/22;
   transform: translateX(3.5rem);
 }
+@media only screen and (max-width: 870px) {
+  .banner-img__img-2 {
+    grid-column: 8/15;
+  }
+}
 .banner-text {
   background: #101D2C;
   grid-column: col-start 5/full-end;
-  padding: 0 4vw;
+  padding: 4rem;
   display: grid;
   align-content: center;
   justify-items: start;
+}
+@media only screen and (max-width: 870px) {
+  .banner-text {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 .banner-text__text {
   margin-bottom: 4rem;
@@ -244,6 +322,15 @@ body {
   padding-top: 3.7rem;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 1250px) {
+  .sidebar {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    padding: 0 4rem 0 0;
+    justify-content: end;
+    align-items: center;
+  }
 }
 
 .hamburger {

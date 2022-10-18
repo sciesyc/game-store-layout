@@ -39,7 +39,7 @@ body {
 }
 @media only screen and (max-width: 870px) {
   .container {
-    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content 50vwrepeat 3, min-content;
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content 50vw repeat(3, min-content);
   }
 }
 

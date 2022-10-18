@@ -185,6 +185,25 @@ body {
 .gamers {
   background: #101D2C;
   grid-column: col-start 7/full-end;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-gap: 4rem 2rem;
+}
+.gamers__title {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+.gamers__img {
+  widht: 7rem;
+  height: 7rem;
+}
+.gamers__text {
+  align-self: center;
+}
+.gamers__score {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #AAAAAA;
 }
 
 .banner-img {
